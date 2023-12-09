@@ -35,3 +35,12 @@ func ConcatString(a, b string) {
 	fmt.Println(test01, test02)
 
 }
+
+func WorkShop() {
+	/*
+		1. Create Variable type of boolean integer and string without assign value and Print all of that
+		2. Create Variable type of boolean integer and string with assign value and Print all of that
+		3. Create Variable type of  string and integer with assign value and use plus sign to concat them and store value to variable and Print all of that
+		4. Add this expression and work it =====> fmt.Printf("Welcome : %s you are Gopher at %v %c\n", myName, time.Now().Format("2006-01-02"), rune(127881))
+	*/
+}
