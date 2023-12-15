@@ -13,8 +13,8 @@ type User struct {
 	FirstName string `json:"first_name"`
 }
 
-func loginHandler(w http.ResponseWriter, req *http.Request) {
-	method := req.Method
+func loginHandler(w http.ResponseWriter, req *http.Request) { // -> ที่คล้าย express  (res, req) 
+	method := req.Method // built in http req
 	if method == "POST" {
 		jsonByte, err := io.ReadAll(req.Body)
 		if err != nil {
@@ -24,7 +24,7 @@ func loginHandler(w http.ResponseWriter, req *http.Request) {
 		}
 		fmt.Println("body", string(jsonByte))
 		var user User
-		err = json.Unmarshal(jsonByte, &user)
+		err = json.Unmarshal(jsonByte, &user) // -> JSON.parse
 		if err != nil {
 			w.WriteHeader(500)
 			w.Write([]byte("invalid request"))
